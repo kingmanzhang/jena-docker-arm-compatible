@@ -14,7 +14,7 @@
 #   limitations under the License.
 
 
-FROM openjdk:11-jre-slim-buster
+FROM amazoncorretto:11
 MAINTAINER Stian Soiland-Reyes <stain@apache.org>
 
 ENV LANG C.UTF-8

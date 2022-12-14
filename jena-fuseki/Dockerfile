@@ -13,17 +13,20 @@
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
 
-
-FROM amazoncorretto:11
-MAINTAINER Stian Soiland-Reyes <stain@apache.org>
+FROM ubuntu:20.04
+#MAINTAINER Stian Soiland-Reyes <stain@apache.org>
+MAINTAINER Aaron Zhang <kingmanzhang@gmail.com>
 
 ENV LANG C.UTF-8
-RUN set -eux; \
-    apt-get update; \
+RUN apt-get update; \
     apt-get install -y --no-install-recommends \
-       bash curl ca-certificates findutils coreutils gettext pwgen procps tini \
-    ; \
-    rm -rf /var/lib/apt/lists/*
+     curl openjdk-11-jdk-headless ca-certificates findutils coreutils gettext pwgen procps tini;
+#RUN set -eux; \
+#    yum update; \
+#    yum install -y --no-install-recommends \
+#       bash curl ca-certificates findutils coreutils gettext pwgen procps tini \
+#    ; \
+#    rm -rf /var/lib/apt/lists/*
 
 
 # Update below according to https://jena.apache.org/download/ 

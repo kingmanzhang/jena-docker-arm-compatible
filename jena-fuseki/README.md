@@ -186,7 +186,7 @@ password using `-e ADMIN_PASSWORD=pw123`.
 
 Assume you have already the container running named `fuseki` you can execute
 
-    docker exec -it fuseki  /bin/bash -c 'tdbloader2 --loc chembl19  /staging/{cco.ttl.gz,void.ttl.gz}'
+    docker exec -it fuseki  /bin/bash -c './tdbloader2 --loc chembl19  /staging/{cco.ttl.gz,void.ttl.gz}'
 
 
 
